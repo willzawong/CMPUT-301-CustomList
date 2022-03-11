@@ -39,6 +39,8 @@ public class CustomListTest {
 
     @Test
     public void countCityTest() {
+        list.addCity(new City("Red Deer", "AB"));
+        list.addCity(new City("Edmonton", "AB"));
         assertEquals(2,list.getCount());
     }
 }

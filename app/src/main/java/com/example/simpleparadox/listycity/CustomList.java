@@ -57,14 +57,19 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public boolean hasCity(String city) {
+        for(int i=0;i<cities.size();i++) {
+            if(cities.get(i).getCityName() == city) return true;
+        }
         return false;
     }
 
     public void deleteCity(String city) {
-        return;
+        for(int i=0;i<cities.size();i++) {
+            if(cities.get(i).getCityName() == city) cities.remove(i);
+        }
     }
 
     public int countCities() {
-        return -1;
+        return cities.size();
     }
 }
